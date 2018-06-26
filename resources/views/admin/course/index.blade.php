@@ -14,19 +14,27 @@
                 <div class="modal-body">
 
                     <div class="form-group">
-                        <label for="txt_departmentname">部门名称</label>
+                        <label for="txt_departmentname">时间段开始</label>
                         <input type="text" name="txt_departmentname" class="form-control" id="txt_departmentname" placeholder="部门名称">
                     </div>
                     <div class="form-group">
-                        <label for="txt_parentdepartment">上级部门</label>
+                        <label for="txt_parentdepartment">时间段结束</label>
                         <input type="text" name="txt_parentdepartment" class="form-control" id="txt_parentdepartment" placeholder="上级部门">
                     </div>
                     <div class="form-group">
-                        <label for="txt_departmentlevel">部门级别</label>
+                        <label for="txt_departmentlevel">第一场次开始时间</label>
                         <input type="text" name="txt_departmentlevel" class="form-control" id="txt_departmentlevel" placeholder="部门级别">
                     </div>
                     <div class="form-group">
-                        <label for="txt_statu">描述</label>
+                        <label for="txt_statu">每场课时间隔时间</label>
+                        <input type="text" name="txt_statu" class="form-control" id="txt_statu" placeholder="状态">
+                    </div>
+                    <div class="form-group">
+                        <label for="txt_statu">场次间隔时间</label>
+                        <input type="text" name="txt_statu" class="form-control" id="txt_statu" placeholder="状态">
+                    </div>
+                    <div class="form-group">
+                        <label for="txt_statu">一共设置几个场次</label>
                         <input type="text" name="txt_statu" class="form-control" id="txt_statu" placeholder="状态">
                     </div>
                 </div>
