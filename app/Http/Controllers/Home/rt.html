@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="panel">
+			<div class="c-head">
+				<button onclick="cmf(1)">1</button>
+				<button onclick="cmf(2)">2</button>
+				<button onclick="cmf(3)">3</button>	
+			</div>
+
+			<div id="f" class="c-body">
+				
+			</div>
+
+	</div>
+	<script type="text/javascript">
+	function cmf(people_num=1,url='http://localhost:9999/rt.php',schedule_id='',course_id=''){
+
+		var template = `<form method="post" action="${url}">
+			<input type="hidden" name="schedule_id" value="${schedule_id}">
+			<input type="hidden" name="course_id" value="${course_id}">
+
+		`;
+
+		for(var i=0;i<people_num;i++){
+			var j = i;
+			if(people_num>1){
+				template += `
+				<br/>${++j}号体验者：<br/>
+				name:<input type="text" name="name[]">
+				<input type="radio" name="gender[${i}]" value="男">男
+				<input type="radio" name="gender[${i}]" value="女">女
+				age:<input type="text" name="age[]">
+				mobile:<input type="text" name="mobile[]">
+				`;
+			}else{
+				template += `
+				<br/>${++i}号体验者：<br/>
+				name:<input type="text" name="name">
+				<input type="radio" name="gender" value="男">男
+				<input type="radio" name="gender" value="女">女
+				age:<input type="text" name="age">
+				mobile:<input type="text" name="mobile">
+				`;
+			}
+			
+		}
+		template += `<input type="submit"></form>`;
+		//return template;
+		document.getElementById('f').innerHTML = template;
+	}
+
+	cmf();
+	// document.getElementById('f').innerHTML= cmf(2);
+	</script>
+</body>
+</html>
